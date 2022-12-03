@@ -1,18 +1,9 @@
-﻿using Day1.Interface;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Day1.Days._2022
+﻿namespace AoC.Solutions._2022
 {
-    public class Day01 : IAoCDay
+    public class Day01 : AoCDay
     {
-        public string[] GetInput() => File.ReadAllLines($"Input/_2022/{this.GetType().Name.Replace("Day", "")}.txt");
-        
-        public void RunPart1() { }
-        public void RunPart2()
+        public override void RunPart1() { }
+        public override void RunPart2()
         {
             string[] data = GetInput();
             int curr = 0;

@@ -1,18 +1,8 @@
-﻿using Day1.Interface;
-using Day1.Utils;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Day1.Days._2022
+﻿namespace AoC.Solutions._2022
 {
-    public class Day03 : IAoCDay
+    public class Day03 : AoCDay
     {
-        public string[] GetInput() => File.ReadAllLines($"Input/_{DateTime.Now.Year}/{this.GetType().Name.Replace("Day", "")}.txt");
-
-        public void RunPart1()
+        public override void RunPart1()
         {
             string[] data = GetInput();
             var ans = data.Select(line =>
@@ -28,7 +18,7 @@ namespace Day1.Days._2022
 
         private char[] GetAlphabetArray() => "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
 
-        public void RunPart2()
+        public override void RunPart2()
         {
             string[] data = GetInput();
 

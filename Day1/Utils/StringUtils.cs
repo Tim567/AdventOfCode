@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Day1.Utils
+namespace AoC.Utils
 {
     public static class StringUtils
     {
