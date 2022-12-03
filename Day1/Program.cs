@@ -3,6 +3,10 @@ using Day1.Interface;
 
 IAoCDay day = new Day3();
 
-day.Run();
+Console.WriteLine("Part 1:");
+day.RunPart1();
+Console.WriteLine("\nPart 2:");
+day.RunPart2();
+
 
 // Console.ReadLine();

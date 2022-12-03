@@ -14,7 +14,9 @@ namespace Day1.Days
             return File.ReadAllLines($"Input/02.txt");
         }
 
-        public void Run()
+        public void RunPart1() { }
+
+        public void RunPart2()
         {
             // Load input.txt as data 
             string[] data = GetInput();

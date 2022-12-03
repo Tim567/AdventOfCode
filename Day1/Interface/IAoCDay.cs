@@ -9,7 +9,8 @@ namespace Day1.Interface
     internal interface IAoCDay
     {
         public string[] GetInput();
-        public void Run();
+        public void RunPart1();
+        public void RunPart2();
 
     }
 }

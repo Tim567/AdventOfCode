@@ -13,8 +13,8 @@ namespace Day1.Days
         {
             return File.ReadAllLines("Input/01.txt");
         }
-
-        public void Run()
+        public void RunPart1() { }
+        public void RunPart2()
         {
             string[] data = GetInput();
             int curr = 0;
