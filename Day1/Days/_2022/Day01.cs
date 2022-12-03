@@ -5,14 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Day1.Days
+namespace Day1.Days._2022
 {
-    public class Day1 : IAoCDay
+    public class Day01 : IAoCDay
     {
-        public string[] GetInput()
-        {
-            return File.ReadAllLines("Input/01.txt");
-        }
+        public string[] GetInput() => File.ReadAllLines($"Input/_2022/{this.GetType().Name.Replace("Day", "")}.txt");
+        
         public void RunPart1() { }
         public void RunPart2()
         {
@@ -44,7 +42,7 @@ namespace Day1.Days
                     }
                     curr = 0;
                 }
-                else curr += Int32.Parse(line);
+                else curr += int.Parse(line);
             }
             Console.WriteLine(max);
             Console.WriteLine(maxThree[0] + maxThree[1] + maxThree[2]);

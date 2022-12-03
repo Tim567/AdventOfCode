@@ -6,14 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Day1.Days
+namespace Day1.Days._2022
 {
-    public class Day3 : IAoCDay
+    public class Day03 : IAoCDay
     {
-        public string[] GetInput()
-        {
-            return File.ReadAllLines($"Input/03.txt");
-        }
+        public string[] GetInput() => File.ReadAllLines($"Input/_{DateTime.Now.Year}/{this.GetType().Name.Replace("Day", "")}.txt");
 
         public void RunPart1()
         {
@@ -37,7 +34,7 @@ namespace Day1.Days
 
             int index = 0;
             int sum = 0;
-            
+
             while (index < data.Length)
             {
                 var group = data.Skip(index).Take(3);
