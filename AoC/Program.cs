@@ -11,8 +11,9 @@ RunDay(dayClass, year, day);
 Console.ForegroundColor = ConsoleColor.Magenta;
 Console.WriteLine("\nRun previous days? (y/n)");
 Console.ForegroundColor = ConsoleColor.White;
-if (Console.ReadLine().ToLower() == "y")
+if (Console.ReadKey() is ConsoleKeyInfo key && key.Key == ConsoleKey.Y)
 {
+    Console.WriteLine();
     day = (int.Parse(day) - 1).ToString("00");
     while (day != "00")
     {
