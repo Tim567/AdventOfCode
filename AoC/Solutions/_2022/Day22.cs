@@ -1,6 +1,6 @@
 ﻿namespace AoC.Solutions._2022
 {
-    public class Day05 : AoCDay
+    public class Day22 : AoCDay
     {
         public override void RunPart1()
         {
