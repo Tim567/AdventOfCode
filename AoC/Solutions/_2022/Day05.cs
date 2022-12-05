@@ -6,7 +6,6 @@ namespace AoC.Solutions._2022
     {
         string[] data;
         List<Stack<char>> stacks;
-        string[] movements;
         List<(int cnt, int src, int dest)> instructions;
         public Day05() => Seed();
 
@@ -14,7 +13,7 @@ namespace AoC.Solutions._2022
         {
             data = GetInput();
             stacks = ParseInput(data);
-            movements = data.Skip(10).ToArray();
+            string[] movements = data.Skip(10).ToArray();
             instructions = new();
             foreach (var move in movements)
             {
@@ -25,6 +24,7 @@ namespace AoC.Solutions._2022
 
         public override void RunPart1()
         {
+            Seed();
             foreach (var ins in instructions) for (int i = 0; i < ins.cnt; i++) stacks[ins.dest - 1].Push(stacks[ins.src - 1].Pop());
             StringBuilder sb = new();
             foreach (var s in stacks) sb.Append(s.Peek());
