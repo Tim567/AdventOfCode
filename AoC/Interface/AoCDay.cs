@@ -10,6 +10,7 @@ namespace AoC.Interface
 {
     public abstract class AoCDay
     {
+
         public string[] GetInput()
         {
             var res = File.ReadAllLines($"Input/{GetType().Namespace[^5..]}/{GetType().Name.Replace("Day", "")}.txt");
