@@ -10,50 +10,30 @@
         {
             data = GetInput();
         }
-        public override void RunPart1()
+        public override void RunPart1() => Console.WriteLine("Answer Part 1: " + GetFirstIndexUniquePair(4));
+
+        public override void RunPart2() => Console.WriteLine("Answer Part 2: " + GetFirstIndexUniquePair(14));
+
+        int GetFirstIndexUniquePair(int len)
         {
             List<char> curr = new List<char>();
             int count = 0;
             foreach (var chr in data[0])
             {
                 count++;
-                //Console.WriteLine(chr);
                 curr.Add(chr);
-                if (curr.Count >= 4)
+                if (curr.Count >= len)
                 {
-                    char[] tmp = curr.Skip(curr.Count - 4).Take(4).ToArray();
+                    char[] tmp = curr.Skip(curr.Count - len).Take(len).ToArray();
                     tmp = tmp.Distinct().ToArray();
-                    if (tmp.Count() == 4)
+                    if (tmp.Count() == len)
                     {
                         break;
                     }
                 }
 
             }
-            Console.WriteLine("Answer Part 1: " + count);
-        }
-
-        public override void RunPart2()
-        {
-            List<char> curr = new List<char>();
-            int count = 0;
-            foreach (var chr in data[0])
-            {
-                count++;
-                //Console.WriteLine(chr);
-                curr.Add(chr);
-                if (curr.Count >= 14)
-                {
-                    char[] tmp = curr.Skip(curr.Count - 14).Take(14).ToArray();
-                    tmp = tmp.Distinct().ToArray();
-                    if (tmp.Count() == 14)
-                    {
-                        break;
-                    }
-                }
-
-            }
-            Console.WriteLine("Answer Part 2: " + count);
+            return count;
         }
     }
 }
