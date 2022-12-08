@@ -2,14 +2,27 @@
 {
     public class Day09 : AoCDay
     {
+        string[] data;
+        public Day09() => Seed();
+
+        void Seed()
+        {
+            data = GetInput();
+
+        }
+        
         public override void RunPart1()
         {
-            string[] data = GetInput();
+            var ans = "";
+
+            Console.WriteLine("Answer Part 1: " + ans);
         }
 
         public override void RunPart2()
         {
-            string[] data = GetInput();
+            var ans = "";
+
+            Console.WriteLine("Answer Part 2: " + ans);
         }
     }
 }

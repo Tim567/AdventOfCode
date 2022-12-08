@@ -67,8 +67,6 @@ namespace AoC.Solutions._2022
             });
         }
 
-
-
         List<int> GetAllSizes(Directory dir)
         {
             List<int> res = new List<int>();
