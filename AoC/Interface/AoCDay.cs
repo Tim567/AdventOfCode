@@ -38,6 +38,7 @@ namespace AoC.Interface
 
             return res;
         }
+
         public abstract void RunPart1();
         public abstract void RunPart2();
 

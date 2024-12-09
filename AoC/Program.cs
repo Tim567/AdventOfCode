@@ -1,7 +1,7 @@
 ﻿string year = DateTime.Now.Year.ToString();
 string day = DateTime.Today.Day.ToString("00");
 
-day = 3.ToString("00");
+day = 5.ToString("00");
 
 AoCDay dayClass = Activator.CreateInstance(Type.GetType($"AoC.Solutions._{year}.Day{day}")) as AoCDay;
 RunDay(dayClass!, year, day);

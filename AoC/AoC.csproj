@@ -90,6 +90,12 @@
     <None Update="Input\_2024\01.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Input\_2024\05.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Input\_2024\04.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Input\_2024\03.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

@@ -1,4 +1,7 @@
-﻿namespace AoC.Utils
+﻿using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+namespace AoC.Utils
 {
     public static class StringUtils
     {
@@ -61,5 +64,57 @@
         }
 
         public static bool OnlyDigits(this string str) => str.All(char.IsDigit);
+
+        public static string ToOneLongSting(this string[] input)
+        {
+            var res = new StringBuilder();
+            foreach (var s in input)
+            {
+                res.Append(s);
+            }
+            return res.ToString();
+        }
+
+        public static List<int> GetAllIndices(this string input, string search)
+        {
+            List<int> indices = new List<int>();
+            int index = input.IndexOf(search);
+
+            while (index != -1)
+            {
+                indices.Add(index);
+                index = input.IndexOf(search, index + 1); // Search for the next occurrence
+            }
+
+            return indices;
+        }
+
+        public static string[] DataAboveLine(this string[] data, string splitLine)
+        {
+            List<string> returnData = new();
+            foreach (var s in data)
+            {
+                if (s.Equals(splitLine)) return returnData.ToArray();
+                returnData.Add(s);
+            }
+            return returnData.ToArray();
+        }
+
+        public static string[] DataBelowLine(this string[] data, string splitLine)
+        {
+            List<string> returnData = new();
+            bool fill = false;
+            foreach (var s in data)
+            {
+                if (fill) returnData.Add(s);
+                if (s.Equals(splitLine)) fill = true;
+            }
+            return returnData.ToArray();
+        }
+
+        public static int ToInt(this string input)
+        {
+            return int.Parse(input);
+        }
     }
 }
