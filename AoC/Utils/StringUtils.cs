@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AoC.Utils
+﻿namespace AoC.Utils
 {
     public static class StringUtils
     {
@@ -65,5 +59,7 @@ namespace AoC.Utils
                     .ToArray();
             }
         }
+
+        public static bool OnlyDigits(this string str) => str.All(char.IsDigit);
     }
 }
