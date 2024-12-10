@@ -116,5 +116,10 @@ namespace AoC.Utils
         {
             return int.Parse(input);
         }
+
+        public static long ToLong(this string input) 
+        {
+            return long.Parse(input); 
+        }
     }
 }
