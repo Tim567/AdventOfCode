@@ -18,8 +18,10 @@ namespace AoC.Interface
             var year = int.Parse(GetType().Namespace![^4..]);
             var day = int.Parse(GetType().Name.Replace("Day", ""));
             
-            var inputPath = $"Input/_{year}/{day:D2}.txt";
-            var sourceInputPath = $"../../../Input/_{year}/{day:D2}.txt";
+            // Use paths relative to the executable location
+            var baseDir = AppDomain.CurrentDomain.BaseDirectory;
+            var inputPath = Path.Combine(baseDir, "Input", $"_{year}", $"{day:D2}.txt");
+            var sourceInputPath = Path.Combine(baseDir, "..", "..", "..", "Input", $"_{year}", $"{day:D2}.txt");
 
             // Check if input file exists and has content
             if (File.Exists(inputPath) && new FileInfo(inputPath).Length > 0)

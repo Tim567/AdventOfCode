@@ -1,16 +1,29 @@
 namespace AoC.Solutions._2025
 {
+    /// <summary>
+    /// Example solution demonstrating the testing and automation features
+    /// This is a template - replace with actual problem logic
+    /// </summary>
     public class Day01 : AoCDay
     {
         public Day01()
         {
-            // Add test cases from the problem description
-            // Example:
-            // AddTestCase(
-            //     input: "test input here",
-            //     expectedPart1: "expected answer for part 1",
-            //     expectedPart2: "expected answer for part 2"
-            // );
+            // Example: Add test cases from the problem description
+            // These will be run when using the --test flag
+            
+            // Simple example test case
+            AddTestCase(
+                input: "1\n2\n3",
+                expectedPart1: "6",      // Sum of numbers
+                expectedPart2: "12"      // Sum doubled
+            );
+            
+            // You can add multiple test cases
+            AddTestCase(
+                input: "10\n20\n30",
+                expectedPart1: "60",
+                expectedPart2: "120"
+            );
         }
 
         public override void RunPart1()
@@ -29,14 +42,32 @@ namespace AoC.Solutions._2025
 
         public override string? SolvePart1(string[] input)
         {
-            // TODO: Implement solution for Part 1
-            return null;
+            // Example solution: Sum all numbers
+            // Replace this with actual problem logic
+            int sum = 0;
+            foreach (var line in input)
+            {
+                if (int.TryParse(line.Trim(), out int num))
+                {
+                    sum += num;
+                }
+            }
+            return sum.ToString();
         }
 
         public override string? SolvePart2(string[] input)
         {
-            // TODO: Implement solution for Part 2
-            return null;
+            // Example solution: Sum all numbers and double it
+            // Replace this with actual problem logic
+            int sum = 0;
+            foreach (var line in input)
+            {
+                if (int.TryParse(line.Trim(), out int num))
+                {
+                    sum += num;
+                }
+            }
+            return (sum * 2).ToString();
         }
     }
 }
