@@ -373,3 +373,6 @@ FodyWeavers.xsd
 
 # Built Visual Studio Code Extensions
 *.vsix
+
+# Advent of Code session cookie - DO NOT COMMIT
+.aoc-session

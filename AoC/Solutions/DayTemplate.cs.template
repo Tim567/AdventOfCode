@@ -1,0 +1,48 @@
+namespace AoC.Solutions._YYYY
+{
+    /// <summary>
+    /// Advent of Code YYYY - Day DD
+    /// TODO: Add problem title and link
+    /// </summary>
+    public class DayDD : AoCDay
+    {
+        public DayDD()
+        {
+            // TODO: Add test cases from the problem description
+            // Example:
+            // AddTestCase(
+            //     input: "sample input from problem",
+            //     expectedPart1: "expected answer for part 1",
+            //     expectedPart2: "expected answer for part 2"
+            // );
+        }
+
+        public override void RunPart1()
+        {
+            string[] data = GetInput();
+            var answer = SolvePart1(data);
+            Console.WriteLine($"Answer: {answer}");
+        }
+
+        public override void RunPart2()
+        {
+            string[] data = GetInput();
+            var answer = SolvePart2(data);
+            Console.WriteLine($"Answer: {answer}");
+        }
+
+        public override string? SolvePart1(string[] input)
+        {
+            // TODO: Implement solution for Part 1
+            
+            return null;
+        }
+
+        public override string? SolvePart2(string[] input)
+        {
+            // TODO: Implement solution for Part 2
+            
+            return null;
+        }
+    }
+}
