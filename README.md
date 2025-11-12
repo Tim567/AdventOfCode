@@ -110,6 +110,21 @@ Options:
 
 ### Step 1: Create the Solution File
 
+You can use the provided template or create from scratch.
+
+**Option A: Copy the Template**
+```bash
+# Copy template and rename
+cp AoC/Solutions/DayTemplate.cs.template AoC/Solutions/_2025/Day01.cs
+
+# Update:
+# - Replace _YYYY with _2025
+# - Replace DayDD with Day01
+# - Add your solution logic
+```
+
+**Option B: Create from Scratch**
+
 Create a new file at `AoC/Solutions/_YYYY/DayDD.cs` (replace YYYY with year, DD with zero-padded day):
 
 ```csharp
